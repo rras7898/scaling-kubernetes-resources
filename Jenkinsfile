@@ -11,9 +11,9 @@ node {
 
     stage('Scaling') {
         // Using credentials for the service account JSON file
-        // withCredentials([file(credentialsId: 'jenkins-sa-cicd', variable: 'service')]) {
-        //     // Copy service account file with unique build number
-        //     sh "cp ${service} ./serviceaccount-${BUILD_NUMBER}.json"
+        withCredentials([file(credentialsId: 'jenkins-sa-cicd', variable: 'service')]) {
+            // Copy service account file with unique build number
+            // sh "cp ${service} ./serviceaccount-${BUILD_NUMBER}.json"
             
             // List files to verify the service account file is present
             sh "ls -l"

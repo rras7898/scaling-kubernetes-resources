@@ -6,7 +6,7 @@ context=gke_apt-bpl_us-central1-b_rohit-gke-cluster
 
 ###################################################################
 
-if [ "$env" == 'dict' ]
+if [ "$env" == 'test' ]
 then
 
     kubectl -n test scale deployment --all --replicas=0 --context $context

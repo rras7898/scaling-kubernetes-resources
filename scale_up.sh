@@ -6,23 +6,31 @@ context=gke_apt-bpl_us-central1-b_rohit-gke-cluster
 
 ###################################################################
 
-if [ "$env" == 'dict' ]
+if [ "$project" == 'digipass' ]
 then
 
-    kubectl -n test scale deployment --all --replicas=4 --context $context
-    echo "Digipass has been scaled down now"
+    kubectl -n digipass scale deployment --all --replicas=1 --context $context
+    echo "Digipass has been scaled up now"
 
 
 fi    
 
 
-# if [ "$env" == 'gcanada' ]
-# then
+if [ "$project" == 'smartwealth' ]
+then
 
-#     env_name="GoogleCanada"
-
-#     kubectl -n gcanada scale deployment --all --replicas=1 --context $context
-#     echo "$env_name has been scaled up now"
+    kubectl -n smartwealth scale deployment --all --replicas=2 --context $context
+    echo "Smartwealth has been scaled up now"
 
 
-# fi
+fi    
+
+
+if [ "$project" == 'goldloan' ]
+then
+
+    kubectl -n goldloan scale deployment --all --replicas=3 --context $context
+    echo "Goldloan has been scaled up now"
+
+
+fi

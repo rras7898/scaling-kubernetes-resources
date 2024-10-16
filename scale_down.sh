@@ -9,7 +9,7 @@ context=gke_apt-bpl_us-central1-c_cluster-1
 if [ "$env" == 'dict' ]
 then
 
-    kubectl -n dict scale deployment --all --replicas=0 --context $context
+    kubectl -n test scale deployment --all --replicas=0 --context $context
     echo "Digipass has been scaled down now"
 
 

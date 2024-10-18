@@ -1,8 +1,8 @@
 #!/bin/bash
 
 gcloud auth activate-service-account --key-file=./serviceaccount-${BUILD_NUMBER}.json
-gcloud container clusters get-credentials rohit-gke-cluster --zone us-central1-b --project apt-bpl
-gcloud container clusters get-credentials cluster-1 --zone us-central1-b --project apt-bpl
+# gcloud container clusters get-credentials rohit-gke-cluster --zone us-central1-b --project apt-bpl
+# gcloud container clusters get-credentials cluster-1 --zone us-central1-b --project apt-bpl
 context1=gke_apt-bpl_us-central1-b_rohit-gke-cluster
 context2=gke_apt-bpl_us-central1-b_cluster-1
 

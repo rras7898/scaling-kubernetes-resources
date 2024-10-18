@@ -14,7 +14,7 @@ node {
         //     sa=$(jq -r '.client_email' ./serviceaccount-${BUILD_NUMBER}.json)
         //     echo $sa
         //     gcloud auth revoke $sa
-        '''
+        // '''
         cleanWs()
         }
     }

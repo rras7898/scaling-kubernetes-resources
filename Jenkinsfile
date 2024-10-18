@@ -10,10 +10,10 @@ node {
         sh "chmod +x scale_up.sh"
         sh 'chmod +x scale_down.sh'
         sh "./scale_${scale}.sh"
-        sh '''
-            sa=$(jq -r '.client_email' ./serviceaccount-${BUILD_NUMBER}.json)
-            echo $sa
-            gcloud auth revoke $sa
+        // sh '''
+        //     sa=$(jq -r '.client_email' ./serviceaccount-${BUILD_NUMBER}.json)
+        //     echo $sa
+        //     gcloud auth revoke $sa
         '''
         cleanWs()
         }
